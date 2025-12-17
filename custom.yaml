@@ -1,0 +1,22 @@
+name: stirling-pdf-custom
+version: "1.0"
+servers:
+  stirling-pdf:
+    type: docker
+    image: stirling-pdf-mcp:latest
+    title: "Stirling PDF MCP Server (Updated)"
+    description: "MCP server for Stirling PDF with corrected API endpoints"
+    secrets:
+      - STIRLING_PDF_URL
+      - STIRLING_PDF_API_KEY
+    tools:
+      - merge_pdfs
+      - split_pdf
+      - compress_pdf
+      - convert_pdf_to_images
+      - rotate_pdf
+      - add_watermark
+      - remove_pages
+      - extract_images
+      - convert_images_to_pdf
+      - ocr_pdf
